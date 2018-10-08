@@ -24,14 +24,45 @@ module.exports = function (app) {
         }
     });
 
-    app.get("/services", function (req, res) {
+   
+
+    // app.get("/services", function (req, res) {
+    //     // if (req.session.user) {
+    //         res.sendFile(path.join(__dirname, "../public/admin/create-service.html"));
+    //     // }
+    //     // else {
+    //         // res.redirect("/");
+    //     // }
+    // });
+
+    app.get("/adminHome", function (req, res) {
         // if (req.session.user) {
-            res.sendFile(path.join(__dirname, "../public/services.html"));
+            res.sendFile(path.join(__dirname, "../public/admin/admin-home.html"));
         // }
         // else {
             // res.redirect("/");
         // }
     });
+
+    app.get("/adminCurrentAppt", function (req, res) {
+        // if (req.session.user) {
+            res.sendFile(path.join(__dirname, "../public/admin/current-appointments.html"));
+        // }
+        // else {
+            // res.redirect("/");
+        // }
+    });
+
+    app.get("/adminCreateServices", function (req, res) {
+        // if (req.session.user) {
+            res.sendFile(path.join(__dirname, "../public/admin/create-service.html"));
+        // }
+        // else {
+            // res.redirect("/");
+        // }
+    });
+
+    
 
     app.get("/calendar", function (req, res) {
         // if (req.session.user) {
